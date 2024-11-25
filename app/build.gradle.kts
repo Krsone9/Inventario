@@ -5,16 +5,20 @@ plugins {
 
 android {
     namespace = "com.krsone9.inventario"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.krsone9.inventario"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
     }
 
     buildTypes {
@@ -36,6 +40,11 @@ android {
 }
 
 dependencies {
+
+    //Retrofit
+    val retrofitVersion = "2.11.0"
+    implementation("com.squareup.retrofit2:retrofit:$retrofitVersion")
+    implementation("com.squareup.retrofit2:converter-gson:$retrofitVersion")
 
     implementation("androidx.core:core-ktx:1.15.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
