@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Inventario"
         tools:targetApi="31">
         <activity
+            android:name=".Activity_producto_detalle"
+            android:exported="false" />
+        <activity
             android:name=".Activities.ProductosActivity"
             android:exported="false" />
         <activity

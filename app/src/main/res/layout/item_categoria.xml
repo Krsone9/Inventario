@@ -2,7 +2,6 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
@@ -18,8 +17,8 @@
             android:layout_gravity="bottom"
             android:gravity="left"
 
-            android:background="@color/amarillo"
-            android:shadowColor="@color/azul"
+            android:background="@color/verde"
+            android:shadowColor="@color/black"
             android:text="Hola"
             android:shadowRadius="5"
             android:textSize="14sp"

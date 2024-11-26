@@ -7,11 +7,22 @@ data class CategoriasListResponse (
     @SerializedName("results") val results: String){}
 
 data class ProductosListResponse (
-    @SerializedName("results") val results: String){}
+    @SerializedName("products") val products: List<ProductosClass>){}
 
-data class ProductoClass (
-    @SerializedName("id") val id: String,
-    @SerializedName("name") val name: String){}
+data class ProductosClass (
+    @SerializedName("category") val category: String,
+    @SerializedName("id") val id: Int,
+    @SerializedName("title") val title: String,
+    @SerializedName("thumbnail") val image: String){}
+
+
+
+
+
+
+
+
+
 
 
 

@@ -5,8 +5,8 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.krsone9.inventario.databinding.ItemCategoriaBinding
 
-class CategoriasAdapter (var items: List<String>, val onItemClick: (Int) -> Unit) : RecyclerView.Adapter<ViewHolder>() {
-        override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+class CategoriasAdapter (var items: List<String>, val onItemClick: (Int) -> Unit) : RecyclerView.Adapter<CategoriaViewHolder>() {
+        override fun onBindViewHolder(holder: CategoriaViewHolder, position: Int) {
             val Categoria_selected = items[position]
 
             holder.render(Categoria_selected)
@@ -14,9 +14,9 @@ class CategoriasAdapter (var items: List<String>, val onItemClick: (Int) -> Unit
             }
         }
 
-        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CategoriaViewHolder {
             val binding = ItemCategoriaBinding.inflate(LayoutInflater.from(parent.context),parent, false)
-            return ViewHolder(binding)
+            return CategoriaViewHolder(binding)
         }
 
         override fun getItemCount(): Int {
@@ -29,7 +29,7 @@ class CategoriasAdapter (var items: List<String>, val onItemClick: (Int) -> Unit
         }
     }
 
-    class ViewHolder(val binding: ItemCategoriaBinding) : RecyclerView.ViewHolder(binding.root) {
+    class CategoriaViewHolder(val binding: ItemCategoriaBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun render(categoria: String) {
             binding.CategoriasTextView.text = categoria
